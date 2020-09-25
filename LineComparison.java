@@ -28,12 +28,14 @@ public class LineComparison {
 		System.out.println(lengthLineOne + " units\t\t" + lengthLineTwo + " units");
 		System.out.println("---------------------------");
 
-		// Checking the equality of the length of two lines using Java equals method
-		boolean areEqual = lengthLineOne.equals(lengthLineTwo);
-		if (areEqual)
+		// Checking the equality of the length of two lines using compareTo method
+		int value = lengthLineOne.compareTo(lengthLineTwo);
+		if (value < 0)
+			System.out.println("The length of line one is less than the length of line two");
+		else if (value == 0)
 			System.out.println("The length of the two lines are equal");
 		else
-			System.out.println("The length of the two lines are not equal");
+			System.out.println("The length of line one is greater than the length of line two");
 	}
 
 }
